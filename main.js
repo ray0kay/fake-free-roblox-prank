@@ -17,7 +17,7 @@ function btnClick(btn) {
   const reward = btn.querySelector("h4");
   const robux = document.querySelector("#nav-robux-amount");
   const result = `${
-    parseInt(reward.textContent.replace(/,/g, "")) + parseInt(robux.textContent)
+    parseInt(reward.textContent.replace(/,/g, "")) + parseInt(robux.textContent.replace(/,/g, ""))
   }`;
   robux.textContent = result;
 }
