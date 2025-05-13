@@ -1,5 +1,3 @@
-// lol who would actually fall for this
-// and actually think they got free robux
 
 // Get all the prices
 const price = document.querySelectorAll(".price-tag");
@@ -117,7 +115,7 @@ const prankInterval = setInterval(() => {
       const currentTime = Date.now();
       const distance = endTime - currentTime;
 
-      if (distance === 0) {
+      if (distance <= 0) {
         location.reload();
       }
 
