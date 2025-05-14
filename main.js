@@ -1,4 +1,3 @@
-
 // Get all the prices
 const price = document.querySelectorAll(".price-tag");
 
@@ -14,9 +13,10 @@ const btns = document.querySelectorAll(".btn-full-width");
 function btnClick(btn) {
   const reward = btn.querySelector("h4");
   const robux = document.querySelector("#nav-robux-amount");
-  const result = `${
-    parseInt(reward.textContent.replace(/,/g, "")) + parseInt(robux.textContent.replace(/,/g, ""))
-  }`;
+  const result = `${(
+    parseInt(reward.textContent.replace(/,/g, "")) +
+    parseInt(robux.textContent.replace(/,/g, ""))
+  ).toLocaleString()}`;
   robux.textContent = result;
 }
 
