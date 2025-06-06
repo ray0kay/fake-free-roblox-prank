@@ -1,11 +1,122 @@
-const price=document.querySelectorAll(".price-tag");price.forEach(A=>{A.style.color="lawngreen",A.textContent="$0.00"});const btns=document.querySelectorAll(".btn-full-width");function btnClick(A){let e=A.querySelector("h4"),t=document.querySelector("#nav-robux-amount"),o=`${(parseInt(e.textContent.replace(/,/g,""))+parseInt(t.textContent.replace(/,/g,""))).toLocaleString()}`;t.textContent=o}function fakeAppeal(){document.body.innerHTML="";let A=document.createElement("h1");A.innerHTML="Whoopsies!<br>",A.style.position="absolute",A.style.top="2vh",A.style.left="50%",A.style.transform="translateX(-50%)",A.style.color="red",document.body.appendChild(A);let e=document.createElement("h2");e.innerHTML=`
+const price = document.querySelectorAll(".price-tag");
+price.forEach((A) => {
+  (A.style.color = "lawngreen"), (A.textContent = "$0.00");
+});
+const btns = document.querySelectorAll(".btn-full-width");
+function btnClick(A) {
+  let e = A.querySelector("h4"),
+    t = document.querySelector("#nav-robux-amount"),
+    o = `${(
+      parseInt(e.textContent.replace(/,/g, "")) +
+      parseInt(t.textContent.replace(/,/g, ""))
+    ).toLocaleString()}`;
+  t.textContent = o;
+}
+function fakeAppeal() {
+  document.body.innerHTML = "";
+  let A = document.createElement("h1");
+  (A.innerHTML = "Whoopsies!<br>"),
+    (A.style.position = "absolute"),
+    (A.style.top = "2vh"),
+    (A.style.left = "50%"),
+    (A.style.transform = "translateX(-50%)"),
+    (A.style.color = "red"),
+    document.body.appendChild(A);
+  let e = document.createElement("h2");
+  (e.innerHTML = `
       Looks like something went wrong.<br>
       Come back another time.
-      `,e.style.position="absolute",e.style.top="10vh",e.style.left="50%",e.style.transform="translateX(-50%)",e.style.color="white",document.body.appendChild(e)}btns.forEach(A=>{let e=A.cloneNode(!0);A.parentNode.replaceChild(e,A),e.onclick=()=>btnClick(e)});const premiumBotton=document.querySelector(".get-premium-button"),clone=premiumBotton.cloneNode(!0);function rng(A,e){return Math.floor(Math.random()*(e-A+1))+A}premiumBotton.parentNode.replaceChild(clone,premiumBotton),clone.onclick=fakeAppeal;const prankInterval=setInterval(()=>{let A=document.querySelector("#nav-robux-amount");if(parseInt(A.textContent.replace(/,/g,""))>=rng(48e3,1e6)){let e=document.querySelector(".container-main");e.style.display="none",A.textContent=0;let t=document.querySelector(".age-bracket-label-username");t.style.color="red",t.textContent="SUSPENDED";let o=document.querySelector(".avatar-card-image"),l=o.querySelector("img");l.src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wAARCAB4AHgDAREAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAr/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCadYTwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH/9k=";let n=document.createElement("div");n.textContent=`
+      `),
+    (e.style.position = "absolute"),
+    (e.style.top = "10vh"),
+    (e.style.left = "50%"),
+    (e.style.transform = "translateX(-50%)"),
+    (e.style.color = "white"),
+    document.body.appendChild(e);
+}
+btns.forEach((A) => {
+  let e = A.cloneNode(!0);
+  A.parentNode.replaceChild(e, A), (e.onclick = () => btnClick(e));
+});
+const premiumBotton = document.querySelector(".get-premium-button"),
+  clone = premiumBotton.cloneNode(!0);
+function rng(A, e) {
+  return Math.floor(Math.random() * (e - A + 1)) + A;
+}
+premiumBotton.parentNode.replaceChild(clone, premiumBotton),
+  (clone.onclick = fakeAppeal);
+const prankInterval = setInterval(() => {
+  let A = document.querySelector("#nav-robux-amount");
+  if (parseInt(A.textContent.replace(/,/g, "")) >= rng(48e3, 1e6)) {
+    let e = document.querySelector(".container-main");
+    (e.style.display = "none"), (A.textContent = 0);
+    let t = document.querySelector(".age-bracket-label-username");
+    (t.style.color = "red"), (t.textContent = "SUSPENDED");
+    let o = document.querySelector(".avatar-card-image"),
+      l = o.querySelector("img");
+    l.src =
+      "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wAARCAB4AHgDAREAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAr/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCadYTwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH/9k=";
+    let n = document.createElement("div");
+    (n.textContent = `
     Roblox Notification:
     Roblox has detected hacking for Robux.
     Hacking is a violation against our TOS.
     Due to this, we have suspended your account
     for 1 week and have revoked all your Robux.
     Thank you for your cooperation b*tch.
-    `,n.style.position="fixed",n.style.top="20px",n.style.left="50%",n.style.transform="translateX(-50%)",n.style.background="black",n.style.color="red",n.style.padding="20px",n.style.fontSize="24px",n.style.border="2px solid red",n.style.zIndex="9999",document.body.appendChild(n);let r=document.createElement("h1"),a=Date.now()+6048e5;function s(){let A=Date.now(),e=a-A;e<=0&&location.reload();let t=Math.floor(e/864e5),o=Math.floor(e%864e5/36e5),l=Math.floor(e%36e5/6e4),n=Math.floor(e%6e4/1e3);t=String(t).padStart(2,"0"),o=String(o).padStart(2,"0"),l=String(l).padStart(2,"0"),n=String(n).padStart(2,"0");let s=`${t}:${o}:${l}:${n}`;r.textContent=s}r.style.position="absolute",r.style.top="60vh",r.style.left="50%",r.style.transform="translateX(-50%)",r.style.zIndex="9999",document.body.appendChild(r),setInterval(s,25);let $=document.createElement("a");$.textContent="APPEAL HERE",$.style.position="fixed",$.style.bottom="100px",$.style.left="50%",$.style.transform="translateX(-50%)",$.style.fontSize="32px",$.style.fontWeight="bold",$.style.color="white",$.style.background="red",$.style.padding="10px 20px",$.style.zIndex="9999",$.style.textDecoration="none",$.style.borderRadius="8px",$.addEventListener("click",A=>{A.preventDefault(),fakeAppeal()}),document.body.appendChild($)}},100);
+    `),
+      (n.style.position = "fixed"),
+      (n.style.top = "20px"),
+      (n.style.left = "50%"),
+      (n.style.transform = "translateX(-50%)"),
+      (n.style.background = "black"),
+      (n.style.color = "red"),
+      (n.style.padding = "20px"),
+      (n.style.fontSize = "24px"),
+      (n.style.border = "2px solid red"),
+      (n.style.zIndex = "9999"),
+      document.body.appendChild(n);
+    let r = document.createElement("h1"),
+      a = Date.now() + 6048e5;
+    function s() {
+      let A = Date.now(),
+        e = a - A;
+      e <= 0 && location.reload();
+      let t = Math.floor(e / 864e5),
+        o = Math.floor((e % 864e5) / 36e5),
+        l = Math.floor((e % 36e5) / 6e4),
+        n = Math.floor((e % 6e4) / 1e3);
+      (t = String(t).padStart(2, "0")),
+        (o = String(o).padStart(2, "0")),
+        (l = String(l).padStart(2, "0")),
+        (n = String(n).padStart(2, "0"));
+      let s = `${t}:${o}:${l}:${n}`;
+      r.textContent = s;
+    }
+    (r.style.position = "absolute"),
+      (r.style.top = "60vh"),
+      (r.style.left = "50%"),
+      (r.style.transform = "translateX(-50%)"),
+      (r.style.zIndex = "9999"),
+      document.body.appendChild(r),
+      setInterval(s, 25);
+    let $ = document.createElement("a");
+    ($.textContent = "APPEAL HERE"),
+      ($.style.position = "fixed"),
+      ($.style.bottom = "100px"),
+      ($.style.left = "50%"),
+      ($.style.transform = "translateX(-50%)"),
+      ($.style.fontSize = "32px"),
+      ($.style.fontWeight = "bold"),
+      ($.style.color = "white"),
+      ($.style.background = "red"),
+      ($.style.padding = "10px 20px"),
+      ($.style.zIndex = "9999"),
+      ($.style.textDecoration = "none"),
+      ($.style.borderRadius = "8px"),
+      $.addEventListener("click", (A) => {
+        A.preventDefault(), fakeAppeal();
+      }),
+      document.body.appendChild($);
+  }
+}, 100);
